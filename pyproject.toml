@@ -1,0 +1,18 @@
+[project]
+name = "metacore-hub"
+version = "0.1.0"
+description = "Daemon-owned task state machine for LLM-driven engineering agents"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+readme = "README.md"
+dependencies = ["jsonschema>=4.0"]
+
+[project.optional-dependencies]
+gemini = ["google-genai"]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["metacore"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
